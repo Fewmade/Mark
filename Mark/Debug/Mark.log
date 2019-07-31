@@ -1,0 +1,10 @@
+﻿  Window.cpp
+sfml-audio-d.lib(sfml-audio-d-2.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in sfml-system-d.lib(sfml-system-d-2.dll); second definition ignored
+sfml-audio-d.lib(sfml-audio-d-2.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+sfml-network-d.lib(sfml-network-d-2.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in sfml-system-d.lib(sfml-system-d-2.dll); second definition ignored
+sfml-network-d.lib(sfml-network-d-2.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+sfml-window-d.lib(sfml-window-d-2.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in sfml-system-d.lib(sfml-system-d-2.dll); second definition ignored
+sfml-window-d.lib(sfml-window-d-2.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+sfml-graphics-d.lib(sfml-graphics-d-2.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in sfml-system-d.lib(sfml-system-d-2.dll); second definition ignored
+sfml-graphics-d.lib(sfml-graphics-d-2.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+  Mark.vcxproj -> E:\Work\GIT\Mark\Debug\Mark.lib
