@@ -12,7 +12,6 @@ int main()
 	wnd->AddWindowEvent(sf::Event::Closed, closeWnd, sf::Keyboard::Unknown);
 
 	Mark::ResourceManager mgr = Mark::ResourceManager::Instance();
-	mgr.Init("Resources/");
 	sf::Texture bg = mgr.GetTexture("bg.jpg");
 	sf::Sprite s(bg);
 
@@ -24,8 +23,6 @@ int main()
 		wnd->Draw(s);
 		wnd->Display();
 	}
-
-	mgr.Unload();
 
 	delete wnd;
 	wnd = nullptr;

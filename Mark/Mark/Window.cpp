@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include "Window.h"
-
+#include <Mark/ResourceManager.h>
+#include <Mark/Time.h>
+#include <direct.h>
 
 Mark::Window::Window(int width, int height, std::string windowName, int framerateLimit)
 {
@@ -8,8 +10,12 @@ Mark::Window::Window(int width, int height, std::string windowName, int framerat
 	m_wnd->setFramerateLimit(framerateLimit);
 
 	m_wndEvents = new std::unordered_map<sf::Event::EventType, std::vector<WEventDetails*>>();
-
 	//Load all managers
+
+	//Creating directory for resources
+	_mkdir("Resources");
+	Mark::ResourceManager::Instance().Init("Resources/");
+	Mark::Time::Instance().Restart();
 }
 
 
@@ -23,7 +29,7 @@ Mark::Window::~Window()
 	m_wnd = nullptr;
 
 	//Unload managers(Reverse order)
-
+	Mark::ResourceManager::Instance().Unload();
 }
 
 void Mark::Window::Clear()
@@ -37,6 +43,7 @@ void Mark::Window::Draw(const sf::Drawable& target)
 void Mark::Window::Display()
 {
 	m_wnd->display();
+	Mark::Time::Instance().Restart();
 }
 
 void Mark::Window::HandleWindowEvents()

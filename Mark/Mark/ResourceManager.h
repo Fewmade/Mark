@@ -8,8 +8,6 @@
 namespace Mark
 {
 
-	enum RESOURCE_TYPE{ Textures, Images, Fonts, Shaders, SoundBuffers, Music };
-
 	class ResourceManager
 	{
 	public:
