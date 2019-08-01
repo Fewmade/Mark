@@ -1,4 +1,7 @@
 ﻿  Window.cpp
+e:\work\git\mark\mark\mark\window.cpp(31): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
+  ResourceManager.cpp
+  Generating Code...
 sfml-audio-d.lib(sfml-audio-d-2.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in sfml-system-d.lib(sfml-system-d-2.dll); second definition ignored
 sfml-audio-d.lib(sfml-audio-d-2.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
 sfml-network-d.lib(sfml-network-d-2.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in sfml-system-d.lib(sfml-system-d-2.dll); second definition ignored

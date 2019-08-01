@@ -34,7 +34,9 @@ namespace Mark
 		~Window();
 
 		void HandleWindowEvents();
-
+		void Clear();
+		void Draw(const sf::Drawable& target);
+		void Display();
 		//Use only for window events!
 		//Events of other objects must handled by themself
 		//For example: player->HandleEvents();

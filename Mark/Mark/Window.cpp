@@ -8,18 +8,35 @@ Mark::Window::Window(int width, int height, std::string windowName, int framerat
 	m_wnd->setFramerateLimit(framerateLimit);
 
 	m_wndEvents = new std::unordered_map<sf::Event::EventType, std::vector<WEventDetails*>>();
+
+	//Load all managers
 }
 
 
 Mark::Window::~Window()
 {
+	m_wndEvents->clear();
+
 	delete m_wndEvents;
 	m_wndEvents = nullptr;
 	delete m_wnd;
 	m_wnd = nullptr;
 
+	//Unload managers(Reverse order)
 
+}
 
+void Mark::Window::Clear()
+{
+	m_wnd->clear(sf::Color(0.f, 0.f, 0.f, 0.f));
+}
+void Mark::Window::Draw(const sf::Drawable& target)
+{
+	m_wnd->draw(target);
+}
+void Mark::Window::Display()
+{
+	m_wnd->display();
 }
 
 void Mark::Window::HandleWindowEvents()
