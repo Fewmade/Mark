@@ -1,15 +1,38 @@
 #include "stdafx.h"
 #include "Debug.h"
+#include <iostream>
 
 
 Mark::DebugManager::DebugManager(Mark::Window& wnd)
 {
 	m_wnd = &wnd;
+
+	m_fps = 0;
+	m_prevFPS = 0;
+	m_timer = 0;
+	m_clock.restart();
 }
 
 Mark::DebugManager::~DebugManager()
 {
 	//DO NOT DELETE m_wnd!!!!!!
+}
+
+void Mark::DebugManager::Update(float elapsed)
+{
+	m_timer += elapsed;
+	m_fps++;
+	if (m_timer >= 1.0f)
+	{
+		m_prevFPS = m_fps;
+		m_fps = 0;
+		m_timer = 0.f;
+	}
+}
+
+int Mark::DebugManager::GetFPS() const
+{
+	return m_prevFPS;
 }
 
 void Mark::DebugManager::AddLine(const sf::Vector2f& from, const sf::Vector2f& to, sf::Color color)

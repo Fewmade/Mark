@@ -8,14 +8,16 @@ Mark::Window::Window(int width, int height, std::string windowName, int framerat
 {
 	m_wnd = new sf::RenderWindow(sf::VideoMode(width, height), windowName);
 	m_wnd->setFramerateLimit(framerateLimit);
+	m_wnd->setVerticalSyncEnabled(false);
 
 	m_wndEvents = new std::unordered_map<sf::Event::EventType, std::vector<WEventDetails*>>();
+	Mark::Time::Instance().Restart();
 	//Load all managers
 
 	//Creating directory for resources
 	_mkdir("Resources");
 	Mark::ResourceManager::Instance().Init("Resources/");
-	Mark::Time::Instance().Restart();
+	
 }
 
 

@@ -3,7 +3,7 @@
 #include <Mark/Window.h>
 #include <Mark/ResourceManager.h>
 #include <Mark/Debug.h>
-
+#include <Mark/Time.h>
 
 int main()
 {
@@ -16,6 +16,8 @@ int main()
 	Mark::ResourceManager mgr = Mark::ResourceManager::Instance();
 	sf::Texture bg = mgr.GetTexture("bg.jpg");
 	sf::Sprite s(bg);
+
+	Mark::DebugManager debug(*wnd);
 
 	while (wnd->IsOpen())
 	{
