@@ -2,6 +2,8 @@
 #include <iostream>
 #include <Mark/Window.h>
 #include <Mark/ResourceManager.h>
+#include <Mark/Debug.h>
+
 
 int main()
 {
@@ -20,7 +22,9 @@ int main()
 		wnd->HandleWindowEvents();
 
 		wnd->Clear();
+
 		wnd->Draw(s);
+
 		wnd->Display();
 	}
 

@@ -36,6 +36,7 @@ namespace Mark
 		void HandleWindowEvents();
 		void Clear();
 		void Draw(const sf::Drawable& target);
+		void Draw(const sf::Vertex* vertices, size_t vertexCount, sf::PrimitiveType type);
 		void Display();
 		//Use only for window events!
 		//Events of other objects must handled by themself

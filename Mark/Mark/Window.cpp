@@ -40,6 +40,10 @@ void Mark::Window::Draw(const sf::Drawable& target)
 {
 	m_wnd->draw(target);
 }
+void Mark::Window::Draw(const sf::Vertex* vertices, size_t vCount, sf::PrimitiveType type)
+{
+	m_wnd->draw(vertices, vCount, type);
+}
 void Mark::Window::Display()
 {
 	m_wnd->display();
