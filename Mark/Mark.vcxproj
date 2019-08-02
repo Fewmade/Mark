@@ -157,6 +157,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Animation.h" />
     <ClInclude Include="Mark\Debug.h" />
     <ClInclude Include="Mark\ResourceManager.h" />
     <ClInclude Include="Mark\Time.h" />
@@ -165,6 +166,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Mark\Debug.cpp" />
     <ClCompile Include="Mark\ResourceManager.cpp" />
     <ClCompile Include="Mark\Time.cpp" />
