@@ -5,7 +5,7 @@
 #include <Mark/Debug.h>
 #include <Mark/Time.h>
 #include <Mark/Animation.h>
-
+#include <Physics.h>
 
 int main()
 {
@@ -22,19 +22,23 @@ int main()
 
 	Mark::DebugManager debug(*wnd);
 
-	Mark::Animation anim(knight, 1, 4, sf::Vector2i(50,37));
-	anim.GetSprite().setScale(sf::Vector2f(4.f, 4.f));
+	Mark::AABB aabb(100, 50);
+	aabb.SetPosition(sf::Vector2f(0.f, 0.f));
+	Mark::AABB _aabb(100, 50);
+	_aabb.SetPosition(sf::Vector2f(100.f, 0.f));
+
+	if (aabb.IsCollide(_aabb))
+	{
+		std::cout << "Collide!";
+	}
 
 	while (wnd->IsOpen())
 	{
 		wnd->HandleWindowEvents();
 
-		anim.Update(Mark::Time::Instance().GetElapsedTime());
-
 		wnd->Clear();
 
 		wnd->Draw(s);
-		wnd->Draw(anim.GetSprite());
 
 		wnd->Display();
 	}
